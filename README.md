@@ -2,32 +2,32 @@
 
 ## 1. Project Overview
 * **Project Name:** AutoSpec AI
-* **Purpose:** [Insert the core problem AutoSpec AI solves from `docs/planning.md` — e.g., An interactive vehicle comparison, filtering, and AI-assisted buying advisor platform.]
+* **Purpose:** AutoSpec AI is an AI-powered automotive performance analysis and comparison platform.
 * **Main Features:**
-  * **Dynamic Vehicle Filtering & Dashboard:** Filter inventory by body style (e.g., SUV), specs, and criteria (`screenshots/app/01-home-dashboard.png`, `02-suv-filter.png`).
-  * **Detailed Spec & Side-by-Side Comparison Views:** Inspect granular vehicle metrics and compare top contenders (`03-vehicle-detail.png`, `04-compare-top.png`).
-  * **Interactive Data Visualizations:** Visual charts breaking down vehicle performance and value metrics (`05-charts.png`).
-  * **AI Buying Advisor (Track & Daily Modes):** Contextual AI recommendations tailored to specific driving use cases, complete with graceful error handling for malformed AI responses (`06-advisor-track-AI-MOCKED.png`, `07-advisor-daily-AI-MOCKED.png`, `08-error-malformed-AI.png`).
-  * **Responsive Mobile Experience:** Full layout adaptability for smaller viewports (`09-mobile-home.png`).
+  * **Dynamic Vehicle Filtering & Dashboard:** Filter inventory by body style (e.g., SUV), specs, and criteria.
+  * **Detailed Spec & Side-by-Side Comparison Views:** Inspect granular vehicle metrics and compare top contenders.
+  * **Interactive Data Visualizations:** Visual charts breaking down vehicle performance and value metrics.
+  * **AI Buying Advisor (Track & Daily Modes):** Contextual AI recommendations tailored to specific driving use cases, complete with graceful error handling for malformed AI responses
+  * **Responsive Mobile Experience:** Full layout adaptability for smaller viewports.
 
 ---
 
 ## 2. Architecture Summary
-* **System Architecture:** [Summarize your architecture from `docs/architecture.md` — e.g., A client-side single-page web application (`src/index.html`) utilizing modular state management, structured data filtering, charting libraries, and an AI advisor integration layer with response validation and mock fallbacks.]
-* **Main Technologies:** HTML5, CSS3, JavaScript, [Add specific UI/charting libraries or AI APIs used], and Python + Playwright for automated end-to-end testing (`tests/e2e_test.py`).
-* **Important Design Decisions:**
-  * **Spec-Driven Development:** Established formal requirements, architecture, and security guidelines before generating UI and application logic.
-  * **Defensive AI Output Handling:** Implemented schema/format validation on AI advisor responses so malformed payloads trigger a user-friendly fallback UI (`08-error-malformed-AI.png`) rather than crashing the client.
-  * **[Add 1–2 more key decisions from `docs/architecture.md` or `docs/design.md`.]**
+- **System Architecture:** A client-side single-page web application (`src/index.html`) utilizing modular state management, structured vehicle data filtering, dynamic charting libraries for performance and value metrics, and a contextual AI advisor integration layer featuring response validation and graceful mock fallbacks.
+- **Main Technologies:** HTML5, CSS3, JavaScript (ES6+), chart visualization libraries, Claude AI integration layer, and Python + Playwright for automated end-to-end testing (`tests/e2e_test.py`).
+- **Important Design Decisions:**
+  * **Spec-Driven Development:** Established formal requirements, architecture, and security guidelines before generating UI components and application logic.
+  * **Defensive AI Output Handling:** Implemented schema/format validation on AI advisor responses so malformed payloads trigger a user-friendly fallback UI (`08-error-malformed-AI.png`) rather than crashing the client application.
+  * **Hybrid Traditional & AI Processing:** Utilized traditional programming for objective mathematical calculations (such as power-to-weight ratios) and data visualization charts, while leveraging Claude AI strictly for interpreting those results and delivering personalized, scenario-aware recommendations.
+  * **Context-Driven Dynamic Prompting:** Architected the AI integration layer to dynamically adapt its reasoning based on user-selected scenarios (e.g., shifting priorities from high-performance track metrics to practical daily driving comfort).
 
 ---
-
-## 3. AI Models and Tools Used
+3. AI Models and Tools Used
 | AI Model / Tool | SDLC Phase(s) | Specific Role & Responsibilities |
 | :--- | :--- | :--- |
-| **[e.g., Claude 3.5 Sonnet / Claude Code]** | Architecture, Implementation, Testing | Guided by `CLAUDE.md` to scaffold `src/index.html`, implement filtering/charting logic, and generate Playwright E2E tests. |
-| **[e.g., ChatGPT / GPT-4o / Gemini]** | Planning, Requirements, Reflection | Brainstormed user personas, drafted initial SDLC specs (`planning.md`, `requirements.md`), and cross-checked edge cases. |
-| **[Add any other tools, e.g., Cursor]** | Implementation, Debugging | Iterative UI refinement, inline diff reviews, and resolving state bugs. |
+| **Claude 3.5 Sonnet / Claude Code** | Architecture, Implementation, Testing | Guided by `CLAUDE.md` to scaffold `src/index.html`, implement vehicle filtering and data visualization charting logic, and generate Playwright E2E tests (`tests/e2e_test.py`). |
+| **ChatGPT (GPT-4o)** | Planning, Requirements, Reflection | Brainstormed user personas, drafted initial SDLC specifications (`docs/planning.md`, `docs/requirements.md`), and cross-checked security edge cases (`docs/security.md`). |
+| **Cursor AI Editor** | Implementation, Debugging | Provided the primary integrated development environment for iterative UI refinement, inline diff reviews, and debugging state handling for the dynamic advisor scenarios. |
 
 ---
 
